@@ -1,0 +1,284 @@
+
+{
+  "invalid_scene": {
+  "id": 0,
+  "name": "无效问题",
+  "description": "用户意图不是分析、查询和统计数据",
+  "parameters": {}
+},
+  "three_figures_and_one_table": {
+  "id": 1,
+  "name": "三图一表",
+  "description": "用户输入的句子含有以下关键词或它们的同义词:汇总、同比、环比，注意不包含'对比'，或其他查询",
+  "parameters":
+    {
+      "key": {
+        "desc": "要查询的对象、主体、指标",
+        "type": "string",
+        "value": []
+      },
+     "time": {
+        "desc": "查询的时间范围",
+        "type": "string",
+        "value": []
+      },
+     "group": {
+        "desc": "查询时按什么条件分组",
+        "type": "string",
+        "value": []
+      },
+      "object": {
+        "desc": "查询对象",
+        "type": "string",
+        "value": []
+      },
+     "measurement": {
+        "desc": "度量",
+        "type": "string",
+        "value": []
+      },
+    "aggregation": {
+        "desc": "聚合方式，有的不需要聚合",
+        "type": "string",
+        "value": []
+      }
+    }
+
+},
+
+    "multiple_rounds_of_dialogue": {
+  "id": 2,
+  "name": "多轮对话",
+  "description": "---------",
+  "parameters": []
+},
+  "thematic_analysis": {
+  "id": 3,
+  "name": "主题分析",
+  "description": "",
+  "parameters":     {
+      "key": {
+        "desc": "要查询的对象、主体、指标",
+        "type": "string",
+        "value": []
+      },
+     "time": {
+        "desc": "查询的时间范围",
+        "type": "string",
+        "value": []
+      },
+     "group": {
+        "desc": "查询时按什么条件分组",
+        "type": "string",
+        "value": []
+      },
+      "object": {
+        "desc": "----",
+        "type": "string",
+        "value": []
+      },
+     "measurement": {
+        "desc": "查询时按什么条件分组",
+        "type": "string",
+        "value": []
+      }
+    }
+},
+
+
+  "fluctuation_analysis": {
+  "id": 4,
+  "name": "波动分析",
+  "description": "含有以下关键词或同义词: 波动、变动、变化、归因、变化情况、变动情况，想要进行数据的波动分析",
+  "parameters":
+    {
+      "key": {
+        "desc": "要查询的对象、主体、指标",
+        "type": "string",
+        "value": []
+      },
+     "time": {
+        "desc": "查询的时间范围",
+        "type": "string",
+        "value": []
+      },
+     "group": {
+        "desc": "查询时按什么条件分组",
+        "type": "string",
+        "value": []
+      },
+      "object": {
+        "desc": "----",
+        "type": "string",
+        "value": []
+      },
+     "measurement": {
+        "desc": "查询时按什么条件分组",
+        "type": "string",
+        "value": []
+      }
+    }
+},
+  "trend_chart": {
+  "id": 5,
+  "name": "趋势图",
+  "description": "含有以下关键词或同义词: 趋势，想要查看数据的趋势图",
+  "parameters":
+    {
+      "key": {
+        "desc": "要查询的对象、主体、指标",
+        "type": "string",
+        "value": []
+      },
+     "time": {
+        "desc": "查询的时间范围",
+        "type": "string",
+        "value": []
+      },
+     "group": {
+        "desc": "查询时按什么条件分组",
+        "type": "string",
+        "value": []
+      },
+      "object": {
+        "desc": "----",
+        "type": "string",
+        "value": []
+      },
+     "measurement": {
+        "desc": "查询时按什么条件分组",
+        "type": "string",
+        "value": []
+      }
+    }
+},
+  "histogram_chart": {
+  "id": 6,
+  "name": "柱状图",
+  "description": "含有以下关键词或同义词: 比较、对比、排名，想要查看数据的柱状图",
+  "parameters":
+    {
+      "key": {
+        "desc": "要查询的对象、主体、指标",
+        "type": "string",
+        "value": []
+      },
+     "time": {
+        "desc": "查询的时间范围",
+        "type": "string",
+        "value": []
+      },
+     "group": {
+        "desc": "查询时按什么条件分组",
+        "type": "string",
+        "value": []
+      },
+      "object": {
+        "desc": "----",
+        "type": "string",
+        "value": []
+      },
+     "measurement": {
+        "desc": "查询时按什么条件分组",
+        "type": "string",
+        "value": []
+      }
+    }
+},
+  "pie_chart": {
+  "id": 7,
+  "name": "饼图",
+  "description": "含有以下关键词或同义词: 占比、比例、分布",
+  "parameters":
+    {
+      "key": {
+        "desc": "要查询的对象、主体、指标",
+        "type": "string",
+        "value": []
+      },
+     "time": {
+        "desc": "查询的时间范围",
+        "type": "string",
+        "value": []
+      },
+     "group": {
+        "desc": "查询时按什么条件分组",
+        "type": "string",
+        "value": []
+      },
+      "object": {
+        "desc": "----",
+        "type": "string",
+        "value": []
+      },
+     "measurement": {
+        "desc": "查询时按什么条件分组",
+        "type": "string",
+        "value": []
+      }
+    }
+},
+  "query_main_data": {
+  "id": 8,
+  "name": "主数据查询",
+  "description": "输入的句子和下面的句子相似：产品大类有哪些？ 或 今年产品大类为烟花品类的抽查批次数？ 或 苏州市一级产品有哪些？ 或 抽查批次号123的抽查信息？ 或 今年苏州市有哪些生产单位？",
+  "parameters": {}
+},
+  "product_percent": {
+  "id": 9,
+  "name": "产品合格率",
+  "description": "用户想要查询产品的合格率，输入的句子含有一下关键词：产品、合格率、合格的百分比。例：根据来源统计2023年抽查为合格的百分比",
+  "parameters":    {
+    "key": {
+      "desc": "要查询的对象、主体、指标",
+      "type": "string",
+      "value": []
+    },
+   "time": {
+      "desc": "查询的时间范围",
+      "type": "string",
+      "value": []
+    },
+   "group": {
+      "desc": "查询时按什么条件分组",
+      "type": "string",
+      "value": []
+    },
+      "object": {
+        "desc": "----",
+        "type": "string",
+        "value": []
+      },
+     "measurement": {
+        "desc": "查询时按什么条件分组",
+        "type": "string",
+        "value": []
+      }
+  }
+},
+  "chou_jiang": {
+  "id": 10,
+  "name": "抽奖",
+  "description": "用户意图想要进行抽奖，输入的句子含有以下关键词或它们的同义词:抽奖、x等奖。",
+  "parameters": {
+      "奖项名称": {
+        "desc": "奖项等级，如x等奖。",
+        "type": "string",
+        "value": []
+      },
+     "中奖人数": {
+        "desc": "中奖人数，如x人。",
+        "type": "string",
+        "value": []
+      }
+    }
+}
+}
+
+
+
+
+
+
+
+    
