@@ -338,16 +338,6 @@ def send_message(message):
     # return send_llm_req.get(config.USE_MODEL, send_local_qwen_message)(message)
 
 
-def is_slot_fully_filled_choujiang(json_data):
-    """
-    检查槽位是否完整填充
-    """
-    if len(json_data["奖项名称"]) > 0 and len(json_data["中奖人数"]) > 0:
-        return True
-    else:
-        return False
-
-
 def get_raw_slot(parameters):
     # 创建新的JSON对象
     output_data = {}
@@ -405,44 +395,17 @@ def update_slot(json_data, dict_target, user_input):
 
     # -----object和measurement这两个槽位不需要模型预测，只用规则
     if "object" in dict_target.keys():  # "object" 在的话 measurement 也在
-        dict_target["object"], dict_target["measurement"] = get_object_measurement(dict_target["object"], dict_target["measurement"], user_input)
+        dict_target["object"], dict_target["measurement"] = get_object_measurement(dict_target["object"],
+                                                                                   dict_target["measurement"],
+                                                                                   user_input)
 
     # -----aggregation槽位不需要模型预测，只用规则
-    if "aggregation" in dict_target.keys(): # 预留情况：可能有些场景需要object和measurement，但不需要aggregation
+    if "aggregation" in dict_target.keys():  # 预留情况：可能有些场景需要object和measurement，但不需要aggregation
         dict_target["aggregation"] = get_object_aggregation(dict_target["aggregation"], user_input)
 
-
-
-def check_current_values(json_data, user_input):
-    award_list = ['特等奖', '一等奖', '二等奖', '三等奖', '四等奖', '五等奖', '六等奖',
-                  '1等奖', '2等奖', '3等奖', '4等奖', '5等奖', '6等奖']
-    num_dict = {"1": 1, "2": 2, "3": 3, "4": 4, "5": 5, "6": 6, "7": 7, "8": 8, "9": 9, "10": 10,
-                "11": 11, "12": 12, "13": 13, "14": 14, "15": 15, "16": 16, "17": 17, "18": 18, "19": 19, "20": 20}
-    # num_chinese_dict = {1:"1", 1:"1", 1:"1", 1:"1", 1:"1", 1:"1", 1:"1", "1:"1", 1:"1", 1:"1"}
-    if "奖项名称" in json_data.keys():
-        if isinstance(json_data["奖项名称"], list):
-            pass
-        else:
-            json_data["奖项名称"] = [json_data["奖项名称"]]
-        for word in json_data["奖项名称"]:
-            if word not in award_list or word not in user_input:
-                json_data["奖项名称"].remove(word)
-
-    if "中奖人数" in json_data.keys():
-        if isinstance(json_data["中奖人数"], list):
-            pass
-        else:
-            json_data["中奖人数"] = [json_data["中奖人数"]]
-        for k in range(0, len(json_data["中奖人数"])):
-            word = json_data["中奖人数"][k]
-            if word in num_dict.keys():
-                json_data["中奖人数"][k] = num_dict[word]
-
-        # for word in json_data["中奖人数"]:
-        #     if str(word) not in user_input:
-        #         json_data["中奖人数"].remove(word)
-
-    return json_data
+    # -----where槽位不需要模型预测，只用规则
+    if "where" in dict_target.keys():  # 预留情况：可能有些场景需要object和measurement，但不需要aggregation
+        dict_target["where"] = get_where(user_input)
 
 
 def format_name_value_for_logging(json_data):
@@ -521,6 +484,7 @@ measurement_list = ['退休人数', '符合医保内费用', '就诊id计数', '
 
 aggregation_list = ['合计', '平均', '最大值', '最小值']
 
+
 def get_object_measurement(object_name, measurement_name, user_input):
     for obj in object_list:
         if obj in user_input:
@@ -544,15 +508,51 @@ def get_object_aggregation(aggregation_name, user_input):
     return aggregation_name  # 列表形式
 
 
-fr_zhibiao = open("zhibiao.json", 'r', encoding='utf-8')
+fr_where = open("utils/where_type.json", 'r', encoding='utf-8')
+json_where = json.load(fr_where)
+
+
+def get_where(user_input):
+    exist_word = []
+    for where_word in json_where.keys():
+        if where_word in user_input:
+            exist_word.append(where_word)
+
+    if len(exist_word) > 0:
+        return exist_word
+    return []
+
+
+def get_where_detail(where_word_list):
+    where_list = []
+    for where_word in where_word_list:
+        if where_word in json_where.keys():
+            where_list.append({"columnId": json_where[where_word]["columnId"],
+                               "columnName": json_where[where_word]["columnName"],
+                              "value": where_word})
+
+    return where_list
+
+
+fr_zhibiao = open("utils/zhibiao.json", 'r', encoding='utf-8')
 json_zhibiao = json.load(fr_zhibiao)
 
-def from_target_get_id(targetname):
 
+def from_target_get_id(targetname):
     if targetname not in json_zhibiao.keys():
         return "不存在" + targetname + "的id"
 
-    return json_zhibiao[targetname]
+    return json_zhibiao[targetname]["targetId"]
 
 
+def from_group_get_id(targetname, group_list):
+    group_with_id_list = []
+    if targetname not in json_zhibiao.keys():
+        return group_with_id_list
 
+    origin_group = json_zhibiao[targetname]["group"]
+    for group_word in group_list:
+        if group_word in origin_group.keys():
+            group_with_id_list.append({"columnId": origin_group[group_word]["columnId"], "columnName": group_word})
+
+    return group_with_id_list

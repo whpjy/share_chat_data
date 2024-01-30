@@ -10,7 +10,6 @@ from scene_processor_detail.deal_fluctuation_analysis import fluctuation_analysi
 from scene_processor_detail.deal_trend_chart import trend_chart
 from scene_processor_detail.deal_histogram_chart import histogram_chart
 from scene_processor_detail.deal_pie_chart import pie_chart
-from scene_processor_detail.deal_chou_jiang import chou_jiang
 from scene_processor_detail.deal_product_percent import product_percent
 from scene_processor_detail.deal_query_main_data import query_main_data
 import time
@@ -224,14 +223,6 @@ class ChatbotModel:
         elif self.current_purpose == 'product_percent':
             result = product_percent(universal_processors, user_input, is_MultiQA)
             print("result: ", result)
-            self.last_llm_answer = result["context"]
-            time_all_2 = time.time()
-            time_all = ' (共用时：' + str(time_all_2 - time_all_1) + "s)"
-            return result
-
-        # 抽奖
-        elif self.current_purpose == 'chou_jiang':
-            result = chou_jiang(universal_processors, user_input, self.last_llm_answer)
             self.last_llm_answer = result["context"]
             time_all_2 = time.time()
             time_all = ' (共用时：' + str(time_all_2 - time_all_1) + "s)"

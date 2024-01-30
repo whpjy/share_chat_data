@@ -12,9 +12,9 @@ new_json_all = {}
 
 for single_data in json_data:
 
-    new_group = []
+    new_group = {}
     for group_word in single_data['group']:
-        new_group.append({group_word["columnName"]: group_word})
+        new_group[group_word["columnName"]] = group_word
 
     single_data['group'] = new_group
     new_json_all[single_data["targetName"]] = single_data

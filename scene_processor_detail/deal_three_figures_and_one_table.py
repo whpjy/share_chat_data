@@ -5,7 +5,7 @@ from utils.helpers import (get_forcr_word, get_clean_text, get_group_word,
                            extract_limits, extract_compare, extract_rank,
                            check_and_fill_forcr_word, check_time,
                            check_group, contains_time, clear_group_and_compare_in_key,
-                           check_key_and_group, from_target_get_id)
+                           check_key_and_group, from_target_get_id, from_group_get_id, get_where_detail)
 
 
 def final_extract_result(universal_processors, data, user_input, is_MultiQA):
@@ -20,6 +20,7 @@ def final_extract_result(universal_processors, data, user_input, is_MultiQA):
     compare = extract_compare(user_input)
     rank = extract_rank(user_input)
     key_list = clear_group_and_compare_in_key(key_list, group_list, compare)
+    where_list = get_where_detail(data['where'])
 
     # -----------------基于知识图谱的多轮-------------------#
     object_name = data['object']
@@ -75,12 +76,12 @@ def final_extract_result(universal_processors, data, user_input, is_MultiQA):
                 "意图": "查询",
                 "key": key_list,
                 "time": time_list,
-                "group": group_list,
+                "group": from_group_get_id(targetName, group_list),
                 "target": {
                     "targetId": from_target_get_id(targetName),
                     "targetName": targetName
                 },
-                "where": [],
+                "where": where_list,
                 "compare": compare,
                 "rank": rank,
                 "limits": limits

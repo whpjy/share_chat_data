@@ -4,8 +4,7 @@ import json
 import time
 
 from scene_processor.scene_processor import SceneProcessor
-from utils.helpers import get_raw_slot, update_slot, format_name_value_for_logging, is_slot_fully_filled_choujiang, send_message, \
-    extract_json_from_string, check_current_values
+from utils.helpers import get_raw_slot, update_slot, format_name_value_for_logging, send_message, extract_json_from_string
 from utils.helpers import get_slot_query_user_json
 from scene_config import scene_prompts
 
@@ -26,16 +25,7 @@ class CommonProcessor(SceneProcessor):
         time2 = time.time()
         print("用时", time2 - time1, "秒: 基于LLM信息抽取")
         current_values = extract_json_from_string(new_info_json_raw)
-        if self.scene_name == "抽奖" and len(current_values) > 0:
-            current_values = check_current_values(current_values, user_input)
         update_slot(current_values, self.slot, user_input)
-        if self.scene_name == "抽奖":
-            # 判断参数是否已经全部补全
-            print("当前slot: ", self.slot)
-            if is_slot_fully_filled_choujiang(self.slot):
-                return self.respond_with_complete_data()
-            else:
-                return self.ask_user_for_missing_data(scene_prompts.prompt_query_user, self.scene_name)
 
         return self.respond_with_complete_data()
 

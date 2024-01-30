@@ -19,8 +19,9 @@ def query_main_data(universal_processors, user_input, is_MultiQA):
     if len(result) == 0:
         ask_for_user_result("生成sql失败")
 
-    if 'result' in result.keys():
-        return ask_for_user_result(result['result'])
+    if isinstance(result, dict):
+        if 'result' in result.keys():
+            return ask_for_user_result(result['result'])
 
     return ask_for_user_result("生成sql失败")
 
