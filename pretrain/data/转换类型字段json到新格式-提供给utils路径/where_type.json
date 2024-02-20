@@ -1,0 +1,430 @@
+{
+    "恶性肿瘤（术后康复）": {
+        "columnId": 16,
+        "columnName": "病种"
+    },
+    "肿瘤术后放疗": {
+        "columnId": 16,
+        "columnName": "病种"
+    },
+    "恶性肿瘤（放疗）": {
+        "columnId": 16,
+        "columnName": "病种"
+    },
+    "透析": {
+        "columnId": 16,
+        "columnName": "病种"
+    },
+    "恶性肿瘤（化疗）": {
+        "columnId": 16,
+        "columnName": "病种"
+    },
+    "肿瘤术后化疗": {
+        "columnId": 16,
+        "columnName": "病种"
+    },
+    "肿瘤术后辅助治疗": {
+        "columnId": 16,
+        "columnName": "病种"
+    },
+    "精神病": {
+        "columnId": 16,
+        "columnName": "病种"
+    },
+    "慢性肾功衰竭（非透析治疗）": {
+        "columnId": 16,
+        "columnName": "病种"
+    },
+    "器官移植抗排异治疗": {
+        "columnId": 16,
+        "columnName": "病种"
+    },
+    "再生障碍性贫血": {
+        "columnId": 16,
+        "columnName": "病种"
+    },
+    "系统性红斑狼疮": {
+        "columnId": 16,
+        "columnName": "病种"
+    },
+    "器官移植术后抗排斥药物": {
+        "columnId": 16,
+        "columnName": "病种"
+    },
+    "急慢性肾衰腹透": {
+        "columnId": 16,
+        "columnName": "病种"
+    },
+    "急慢性肾衰血透": {
+        "columnId": 16,
+        "columnName": "病种"
+    },
+    "慢性肾功能衰竭": {
+        "columnId": 16,
+        "columnName": "病种"
+    },
+    "居民精神病门诊": {
+        "columnId": 16,
+        "columnName": "病种"
+    },
+    "躁狂型精神病（门）": {
+        "columnId": 16,
+        "columnName": "病种"
+    },
+    "活动性肺结核": {
+        "columnId": 16,
+        "columnName": "病种"
+    },
+    "南京市江宁区东山街道上坊社区卫生服务中心": {
+        "columnId": 24,
+        "columnName": "医院名称"
+    },
+    "苏州大学附属第二医院": {
+        "columnId": 24,
+        "columnName": "医院名称"
+    },
+    "无锡华清医院": {
+        "columnId": 24,
+        "columnName": "医院名称"
+    },
+    "南京市浦口区中心医院": {
+        "columnId": 24,
+        "columnName": "医院名称"
+    },
+    "无锡市人民医院": {
+        "columnId": 24,
+        "columnName": "医院名称"
+    },
+    "南京市江宁区中医院": {
+        "columnId": 24,
+        "columnName": "医院名称"
+    },
+    "昆山市第一人民医院": {
+        "columnId": 24,
+        "columnName": "医院名称"
+    },
+    "苏州大学附属儿童医院": {
+        "columnId": 24,
+        "columnName": "医院名称"
+    },
+    "南京建邺集庆中西医结合诊所": {
+        "columnId": 24,
+        "columnName": "医院名称"
+    },
+    "北京市朝阳区奥运村社区卫生服务中心": {
+        "columnId": 24,
+        "columnName": "医院名称"
+    },
+    "南京市中西医结合医院": {
+        "columnId": 24,
+        "columnName": "医院名称"
+    },
+    "张家港市第六人民医院": {
+        "columnId": 24,
+        "columnName": "医院名称"
+    },
+    "杭州市富阳区第一人民医院": {
+        "columnId": 24,
+        "columnName": "医院名称"
+    },
+    "连云港长寿医院": {
+        "columnId": 24,
+        "columnName": "医院名称"
+    },
+    "连云港市中医院": {
+        "columnId": 24,
+        "columnName": "医院名称"
+    },
+    "南京市第二医院": {
+        "columnId": 24,
+        "columnName": "医院名称"
+    },
+    "连云港市赣榆区中医院": {
+        "columnId": 24,
+        "columnName": "医院名称"
+    },
+    "上海交通大学医学院附属新华医院": {
+        "columnId": 24,
+        "columnName": "医院名称"
+    },
+    "南京医科大学第二附属医院": {
+        "columnId": 24,
+        "columnName": "医院名称"
+    },
+    "赣榆瑞慈医院": {
+        "columnId": 24,
+        "columnName": "医院名称"
+    },
+    "连云港灌云仁济医院": {
+        "columnId": 24,
+        "columnName": "医院名称"
+    },
+    "常州市第七人民医院": {
+        "columnId": 24,
+        "columnName": "医院名称"
+    },
+    "灌云县人民医院": {
+        "columnId": 24,
+        "columnName": "医院名称"
+    },
+    "苏州大学附属第一医院": {
+        "columnId": 24,
+        "columnName": "医院名称"
+    },
+    "连云港市第一人民医院": {
+        "columnId": 24,
+        "columnName": "医院名称"
+    },
+    "启东市城区医院": {
+        "columnId": 24,
+        "columnName": "医院名称"
+    },
+    "东海县人民医院": {
+        "columnId": 24,
+        "columnName": "医院名称"
+    },
+    "南通大学附属医院": {
+        "columnId": 24,
+        "columnName": "医院名称"
+    },
+    "常熟市古里卫生院": {
+        "columnId": 24,
+        "columnName": "医院名称"
+    },
+    "江苏省中西医结合医院": {
+        "columnId": 24,
+        "columnName": "医院名称"
+    },
+    "江苏省人民医院": {
+        "columnId": 24,
+        "columnName": "医院名称"
+    },
+    "连云港圣安医院": {
+        "columnId": 24,
+        "columnName": "医院名称"
+    },
+    "太仓市第一人民医院": {
+        "columnId": 24,
+        "columnName": "医院名称"
+    },
+    "灌南县人民医院": {
+        "columnId": 24,
+        "columnName": "医院名称"
+    },
+    "苏州明基医院、苏州明基医院互联网医院": {
+        "columnId": 24,
+        "columnName": "医院名称"
+    },
+    "天津市滨海新区大港医院": {
+        "columnId": 24,
+        "columnName": "医院名称"
+    },
+    "浙江省肿瘤医院": {
+        "columnId": 24,
+        "columnName": "医院名称"
+    },
+    "连云港市第二人民医院（连云港市临床肿瘤研究所）": {
+        "columnId": 24,
+        "columnName": "医院名称"
+    },
+    "灌云县精神病医院": {
+        "columnId": 24,
+        "columnName": "医院名称"
+    },
+    "苏州工业园区星海医院": {
+        "columnId": 24,
+        "columnName": "医院名称"
+    },
+    "淮安市第一人民医院": {
+        "columnId": 24,
+        "columnName": "医院名称"
+    },
+    "镇江市中医院": {
+        "columnId": 24,
+        "columnName": "医院名称"
+    },
+    "连云港市东方医院": {
+        "columnId": 24,
+        "columnName": "医院名称"
+    },
+    "灌南县第一人民医院": {
+        "columnId": 24,
+        "columnName": "医院名称"
+    },
+    "连云港市赣榆区人民医院": {
+        "columnId": 24,
+        "columnName": "医院名称"
+    },
+    "东海县精神病医院": {
+        "columnId": 24,
+        "columnName": "医院名称"
+    },
+    "上海儿童医学中心": {
+        "columnId": 24,
+        "columnName": "医院名称"
+    },
+    "连云港市传染病医院，连云港市第四人民医院": {
+        "columnId": 24,
+        "columnName": "医院名称"
+    },
+    "东海仁慈医院": {
+        "columnId": 24,
+        "columnName": "医院名称"
+    },
+    "中国人民解放军总医院第五医学中心": {
+        "columnId": 24,
+        "columnName": "医院名称"
+    },
+    "连云港市赣榆区精神病防治院（江苏省赣榆经济开发区社区卫生服务中心）": {
+        "columnId": 24,
+        "columnName": "医院名称"
+    },
+    "南京南钢医院": {
+        "columnId": 24,
+        "columnName": "医院名称"
+    },
+    "无锡市仁德（康复）医院": {
+        "columnId": 24,
+        "columnName": "医院名称"
+    },
+    "北京王府中西医结合医院": {
+        "columnId": 24,
+        "columnName": "医院名称"
+    },
+    "灌南县精神病医院": {
+        "columnId": 24,
+        "columnName": "医院名称"
+    },
+    "灌云县中医院": {
+        "columnId": 24,
+        "columnName": "医院名称"
+    },
+    "北京大学第一医院(北京大学北大医院）": {
+        "columnId": 24,
+        "columnName": "医院名称"
+    },
+    "东海县中医院": {
+        "columnId": 24,
+        "columnName": "医院名称"
+    },
+    "南京军区总医院": {
+        "columnId": 24,
+        "columnName": "医院名称"
+    },
+    "南京明基医院": {
+        "columnId": 24,
+        "columnName": "医院名称"
+    },
+    "南京一民医院": {
+        "columnId": 24,
+        "columnName": "医院名称"
+    },
+    "南京市雨花医院(南京市雨花台区雨花社区卫生服务中心)": {
+        "columnId": 24,
+        "columnName": "医院名称"
+    },
+    "连云港市康复医院": {
+        "columnId": 24,
+        "columnName": "医院名称"
+    },
+    "三级甲等": {
+        "columnId": 65,
+        "columnName": "医院等级"
+    },
+    "二级甲等": {
+        "columnId": 65,
+        "columnName": "医院等级"
+    },
+    "三级丙等": {
+        "columnId": 65,
+        "columnName": "医院等级"
+    },
+    "一级甲等": {
+        "columnId": 65,
+        "columnName": "医院等级"
+    },
+    "三级乙等": {
+        "columnId": 47,
+        "columnName": "医院等级"
+    },
+    "云县": {
+        "columnId": 67,
+        "columnName": "统筹区"
+    },
+    "灌县": {
+        "columnId": 67,
+        "columnName": "统筹区"
+    },
+    "赣区": {
+        "columnId": 67,
+        "columnName": "统筹区"
+    },
+    "东县": {
+        "columnId": 67,
+        "columnName": "统筹区"
+    },
+    "市本级": {
+        "columnId": 67,
+        "columnName": "统筹区"
+    },
+    "省内异地": {
+        "columnId": 69,
+        "columnName": "就医地"
+    },
+    "本地": {
+        "columnId": 69,
+        "columnName": "就医地"
+    },
+    "省外异地": {
+        "columnId": 69,
+        "columnName": "就医地"
+    },
+    "普通居民（成年）": {
+        "columnId": 54,
+        "columnName": "人员类别"
+    },
+    "未成年（未入学）": {
+        "columnId": 54,
+        "columnName": "人员类别"
+    },
+    "学龄前儿童": {
+        "columnId": 54,
+        "columnName": "人员类别"
+    },
+    "大学生": {
+        "columnId": 54,
+        "columnName": "人员类别"
+    },
+    "中小学生": {
+        "columnId": 54,
+        "columnName": "人员类别"
+    },
+    "无等级": {
+        "columnId": 65,
+        "columnName": "医院等级"
+    },
+    "职工退休": {
+        "columnId": 72,
+        "columnName": "人员类别"
+    },
+    "公务员退休": {
+        "columnId": 72,
+        "columnName": "人员类别"
+    },
+    "自由职业": {
+        "columnId": 72,
+        "columnName": "人员类别"
+    },
+    "职工在职": {
+        "columnId": 72,
+        "columnName": "人员类别"
+    },
+    "灵活就业人员退休": {
+        "columnId": 72,
+        "columnName": "人员类别"
+    },
+    "公务员在职": {
+        "columnId": 72,
+        "columnName": "人员类别"
+    }
+}

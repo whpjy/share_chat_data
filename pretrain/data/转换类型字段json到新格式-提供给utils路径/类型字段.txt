@@ -1,0 +1,538 @@
+[
+    {
+      "columnId": 16,
+      "values": [
+        {
+          "targetValue": "恶性肿瘤（术后康复）",
+          "sourceValue": "恶性肿瘤（术后康复）"
+        },
+        {
+          "targetValue": "肿瘤术后放疗",
+          "sourceValue": "肿瘤术后放疗"
+        },
+        {
+          "targetValue": "恶性肿瘤（放疗）",
+          "sourceValue": "恶性肿瘤（放疗）"
+        },
+        {
+          "targetValue": "透析",
+          "sourceValue": "透析"
+        },
+        {
+          "targetValue": "恶性肿瘤（化疗）",
+          "sourceValue": "恶性肿瘤（化疗）"
+        },
+        {
+          "targetValue": "肿瘤术后化疗",
+          "sourceValue": "肿瘤术后化疗"
+        },
+        {
+          "targetValue": "肿瘤术后辅助治疗",
+          "sourceValue": "肿瘤术后辅助治疗"
+        },
+        {
+          "targetValue": "精神病",
+          "sourceValue": "精神病"
+        },
+        {
+          "targetValue": "慢性肾功衰竭（非透析治疗）",
+          "sourceValue": "慢性肾功衰竭（非透析治疗）"
+        },
+        {
+          "targetValue": "器官移植抗排异治疗",
+          "sourceValue": "器官移植抗排异治疗"
+        },
+        {
+          "targetValue": "再生障碍性贫血",
+          "sourceValue": "再生障碍性贫血"
+        },
+        {
+          "targetValue": "系统性红斑狼疮",
+          "sourceValue": "系统性红斑狼疮"
+        },
+        {
+          "targetValue": "器官移植术后抗排斥药物",
+          "sourceValue": "器官移植术后抗排斥药物"
+        },
+        {
+          "targetValue": "急慢性肾衰腹透",
+          "sourceValue": "急慢性肾衰腹透"
+        },
+        {
+          "targetValue": "急慢性肾衰血透",
+          "sourceValue": "急慢性肾衰血透"
+        },
+        {
+          "targetValue": "慢性肾功能衰竭",
+          "sourceValue": "慢性肾功能衰竭"
+        },
+        {
+          "targetValue": "居民精神病门诊",
+          "sourceValue": "居民精神病门诊"
+        },
+        {
+          "targetValue": "躁狂型精神病（门）",
+          "sourceValue": "躁狂型精神病（门）"
+        },
+        {
+          "targetValue": "活动性肺结核",
+          "sourceValue": "活动性肺结核"
+        }
+      ],
+      "columnName": "病种"
+    },
+    {
+      "columnId": 24,
+      "values": [
+        {
+          "targetValue": "南京市江宁区东山街道上坊社区卫生服务中心",
+          "sourceValue": "南京市江宁区东山街道上坊社区卫生服务中心"
+        },
+        {
+          "targetValue": "苏州大学附属第二医院",
+          "sourceValue": "苏州大学附属第二医院"
+        },
+        {
+          "targetValue": "无锡华清医院",
+          "sourceValue": "无锡华清医院"
+        },
+        {
+          "targetValue": "南京市浦口区中心医院",
+          "sourceValue": "南京市浦口区中心医院"
+        },
+        {
+          "targetValue": "无锡市人民医院",
+          "sourceValue": "无锡市人民医院"
+        },
+        {
+          "targetValue": "南京市江宁区中医院",
+          "sourceValue": "南京市江宁区中医院"
+        },
+        {
+          "targetValue": "昆山市第一人民医院",
+          "sourceValue": "昆山市第一人民医院"
+        },
+        {
+          "targetValue": "苏州大学附属儿童医院",
+          "sourceValue": "苏州大学附属儿童医院"
+        },
+        {
+          "targetValue": "南京建邺集庆中西医结合诊所",
+          "sourceValue": "南京建邺集庆中西医结合诊所"
+        },
+        {
+          "targetValue": "北京市朝阳区奥运村社区卫生服务中心",
+          "sourceValue": "北京市朝阳区奥运村社区卫生服务中心"
+        },
+        {
+          "targetValue": "南京市中西医结合医院",
+          "sourceValue": "南京市中西医结合医院"
+        },
+        {
+          "targetValue": "张家港市第六人民医院",
+          "sourceValue": "张家港市第六人民医院"
+        },
+        {
+          "targetValue": "杭州市富阳区第一人民医院",
+          "sourceValue": "杭州市富阳区第一人民医院"
+        },
+        {
+          "targetValue": "连云港长寿医院",
+          "sourceValue": "连云港长寿医院"
+        },
+        {
+          "targetValue": "连云港市中医院",
+          "sourceValue": "连云港市中医院"
+        },
+        {
+          "targetValue": "南京市第二医院",
+          "sourceValue": "南京市第二医院"
+        },
+        {
+          "targetValue": "连云港市赣榆区中医院",
+          "sourceValue": "连云港市赣榆区中医院"
+        },
+        {
+          "targetValue": "上海交通大学医学院附属新华医院",
+          "sourceValue": "上海交通大学医学院附属新华医院"
+        },
+        {
+          "targetValue": "南京医科大学第二附属医院",
+          "sourceValue": "南京医科大学第二附属医院"
+        },
+        {
+          "targetValue": "赣榆瑞慈医院",
+          "sourceValue": "赣榆瑞慈医院"
+        },
+        {
+          "targetValue": "连云港灌云仁济医院",
+          "sourceValue": "连云港灌云仁济医院"
+        },
+        {
+          "targetValue": "常州市第七人民医院",
+          "sourceValue": "常州市第七人民医院"
+        },
+        {
+          "targetValue": "灌云县人民医院",
+          "sourceValue": "灌云县人民医院"
+        },
+        {
+          "targetValue": "苏州大学附属第一医院",
+          "sourceValue": "苏州大学附属第一医院"
+        },
+        {
+          "targetValue": "连云港市第一人民医院",
+          "sourceValue": "连云港市第一人民医院"
+        },
+        {
+          "targetValue": "启东市城区医院",
+          "sourceValue": "启东市城区医院"
+        },
+        {
+          "targetValue": "东海县人民医院",
+          "sourceValue": "东海县人民医院"
+        },
+        {
+          "targetValue": "南通大学附属医院",
+          "sourceValue": "南通大学附属医院"
+        },
+        {
+          "targetValue": "常熟市古里卫生院",
+          "sourceValue": "常熟市古里卫生院"
+        },
+        {
+          "targetValue": "江苏省中西医结合医院",
+          "sourceValue": "江苏省中西医结合医院"
+        },
+        {
+          "targetValue": "江苏省人民医院",
+          "sourceValue": "江苏省人民医院"
+        },
+        {
+          "targetValue": "连云港圣安医院",
+          "sourceValue": "连云港圣安医院"
+        },
+        {
+          "targetValue": "太仓市第一人民医院",
+          "sourceValue": "太仓市第一人民医院"
+        },
+        {
+          "targetValue": "灌南县人民医院",
+          "sourceValue": "灌南县人民医院"
+        },
+        {
+          "targetValue": "苏州明基医院、苏州明基医院互联网医院",
+          "sourceValue": "苏州明基医院、苏州明基医院互联网医院"
+        },
+        {
+          "targetValue": "天津市滨海新区大港医院",
+          "sourceValue": "天津市滨海新区大港医院"
+        },
+        {
+          "targetValue": "浙江省肿瘤医院",
+          "sourceValue": "浙江省肿瘤医院"
+        },
+        {
+          "targetValue": "连云港市第二人民医院（连云港市临床肿瘤研究所）",
+          "sourceValue": "连云港市第二人民医院（连云港市临床肿瘤研究所）"
+        },
+        {
+          "targetValue": "灌云县精神病医院",
+          "sourceValue": "灌云县精神病医院"
+        },
+        {
+          "targetValue": "苏州工业园区星海医院",
+          "sourceValue": "苏州工业园区星海医院"
+        },
+        {
+          "targetValue": "淮安市第一人民医院",
+          "sourceValue": "淮安市第一人民医院"
+        },
+        {
+          "targetValue": "镇江市中医院",
+          "sourceValue": "镇江市中医院"
+        },
+        {
+          "targetValue": "连云港市东方医院",
+          "sourceValue": "连云港市东方医院"
+        },
+        {
+          "targetValue": "灌南县第一人民医院",
+          "sourceValue": "灌南县第一人民医院"
+        },
+        {
+          "targetValue": "连云港市赣榆区人民医院",
+          "sourceValue": "连云港市赣榆区人民医院"
+        },
+        {
+          "targetValue": "东海县精神病医院",
+          "sourceValue": "东海县精神病医院"
+        },
+        {
+          "targetValue": "上海儿童医学中心",
+          "sourceValue": "上海儿童医学中心"
+        },
+        {
+          "targetValue": "连云港市传染病医院，连云港市第四人民医院",
+          "sourceValue": "连云港市传染病医院，连云港市第四人民医院"
+        },
+        {
+          "targetValue": "东海仁慈医院",
+          "sourceValue": "东海仁慈医院"
+        },
+        {
+          "targetValue": "中国人民解放军总医院第五医学中心",
+          "sourceValue": "中国人民解放军总医院第五医学中心"
+        },
+        {
+          "targetValue": "连云港市赣榆区精神病防治院（江苏省赣榆经济开发区社区卫生服务中心）",
+          "sourceValue": "连云港市赣榆区精神病防治院（江苏省赣榆经济开发区社区卫生服务中心）"
+        },
+        {
+          "targetValue": "南京南钢医院",
+          "sourceValue": "南京南钢医院"
+        },
+        {
+          "targetValue": "无锡市仁德（康复）医院",
+          "sourceValue": "无锡市仁德（康复）医院"
+        },
+        {
+          "targetValue": "北京王府中西医结合医院",
+          "sourceValue": "北京王府中西医结合医院"
+        },
+        {
+          "targetValue": "灌南县精神病医院",
+          "sourceValue": "灌南县精神病医院"
+        },
+        {
+          "targetValue": "灌云县中医院",
+          "sourceValue": "灌云县中医院"
+        },
+        {
+          "targetValue": "北京大学第一医院(北京大学北大医院）",
+          "sourceValue": "北京大学第一医院(北京大学北大医院）"
+        },
+        {
+          "targetValue": "东海县中医院",
+          "sourceValue": "东海县中医院"
+        },
+        {
+          "targetValue": "南京军区总医院",
+          "sourceValue": "南京军区总医院"
+        },
+        {
+          "targetValue": "南京明基医院",
+          "sourceValue": "南京明基医院"
+        },
+        {
+          "targetValue": "南京一民医院",
+          "sourceValue": "南京一民医院"
+        },
+        {
+          "targetValue": "南京市雨花医院(南京市雨花台区雨花社区卫生服务中心)",
+          "sourceValue": "南京市雨花医院(南京市雨花台区雨花社区卫生服务中心)"
+        },
+        {
+          "targetValue": "连云港市康复医院",
+          "sourceValue": "连云港市康复医院"
+        }
+      ],
+      "columnName": "医院名称"
+    },
+    {
+      "columnId": 47,
+      "values": [
+        {
+          "targetValue": "三级甲等",
+          "sourceValue": "三级甲等"
+        },
+        {
+          "targetValue": "二级甲等",
+          "sourceValue": "二级甲等"
+        },
+        {
+          "targetValue": "三级丙等",
+          "sourceValue": "三级丙等"
+        },
+        {
+          "targetValue": "一级甲等",
+          "sourceValue": "一级甲等"
+        },
+        {
+          "targetValue": "三级乙等",
+          "sourceValue": "三级乙等"
+        }
+      ],
+      "columnName": "医院等级"
+    },
+    {
+      "columnId": 49,
+      "values": [
+        {
+          "targetValue": "云县",
+          "sourceValue": "云县"
+        },
+        {
+          "targetValue": "灌县",
+          "sourceValue": "灌县"
+        },
+        {
+          "targetValue": "赣区",
+          "sourceValue": "赣区"
+        },
+        {
+          "targetValue": "东县",
+          "sourceValue": "东县"
+        },
+        {
+          "targetValue": "市本级",
+          "sourceValue": "市本级"
+        }
+      ],
+      "columnName": "统筹区"
+    },
+    {
+      "columnId": 51,
+      "values": [
+        {
+          "targetValue": "省内异地",
+          "sourceValue": "省内异地"
+        },
+        {
+          "targetValue": "本地",
+          "sourceValue": "本地"
+        },
+        {
+          "targetValue": "省外异地",
+          "sourceValue": "省外异地"
+        }
+      ],
+      "columnName": "就医地"
+    },
+    {
+      "columnId": 54,
+      "values": [
+        {
+          "targetValue": "普通居民（成年）",
+          "sourceValue": "普通居民（成年）"
+        },
+        {
+          "targetValue": "未成年（未入学）",
+          "sourceValue": "未成年（未入学）"
+        },
+        {
+          "targetValue": "学龄前儿童",
+          "sourceValue": "学龄前儿童"
+        },
+        {
+          "targetValue": "大学生",
+          "sourceValue": "大学生"
+        },
+        {
+          "targetValue": "中小学生",
+          "sourceValue": "中小学生"
+        }
+      ],
+      "columnName": "人员类别"
+    },
+    {
+      "columnId": 65,
+      "values": [
+        {
+          "targetValue": "一级甲等",
+          "sourceValue": "一级甲等"
+        },
+        {
+          "targetValue": "二级甲等",
+          "sourceValue": "二级甲等"
+        },
+        {
+          "targetValue": "无等级",
+          "sourceValue": "无等级"
+        },
+        {
+          "targetValue": "三级甲等",
+          "sourceValue": "三级甲等"
+        },
+        {
+          "targetValue": "三级丙等",
+          "sourceValue": "三级丙等"
+        }
+      ],
+      "columnName": "医院等级"
+    },
+    {
+      "columnId": 67,
+      "values": [
+        {
+          "targetValue": "灌县",
+          "sourceValue": "灌县"
+        },
+        {
+          "targetValue": "云县",
+          "sourceValue": "云县"
+        },
+        {
+          "targetValue": "赣区",
+          "sourceValue": "赣区"
+        },
+        {
+          "targetValue": "市本级",
+          "sourceValue": "市本级"
+        },
+        {
+          "targetValue": "东县",
+          "sourceValue": "东县"
+        }
+      ],
+      "columnName": "统筹区"
+    },
+    {
+      "columnId": 69,
+      "values": [
+        {
+          "targetValue": "省内异地",
+          "sourceValue": "省内异地"
+        },
+        {
+          "targetValue": "省外异地",
+          "sourceValue": "省外异地"
+        },
+        {
+          "targetValue": "本地",
+          "sourceValue": "本地"
+        }
+      ],
+      "columnName": "就医地"
+    },
+    {
+      "columnId": 72,
+      "values": [
+        {
+          "targetValue": "职工退休",
+          "sourceValue": "职工退休"
+        },
+        {
+          "targetValue": "公务员退休",
+          "sourceValue": "公务员退休"
+        },
+        {
+          "targetValue": "自由职业",
+          "sourceValue": "灵活就业人员在职"
+        },
+        {
+          "targetValue": "职工在职",
+          "sourceValue": "职工在职"
+        },
+        {
+          "targetValue": "灵活就业人员退休",
+          "sourceValue": "灵活就业人员退休"
+        },
+        {
+          "targetValue": "公务员在职",
+          "sourceValue": "公务员在职"
+        }
+      ],
+      "columnName": "人员类别"
+    }
+  ]

@@ -1,0 +1,39 @@
+{
+	"type": "1",
+	"value": {
+		"意图": "查询",
+		"time": [
+			[
+				"2023-01-01",
+				"2023-07-31"
+			]
+		],
+		"group": [{
+			"columnId": "123",
+			"columnName": "统筹区"
+		},{
+			"columnId": "111",
+			"columnName": "就医地"
+		}],
+		"target": {
+			"targetId": "82442",
+			"targetName": "职工特殊病统筹基金合计"
+		},
+		"where": [{
+			"columnId": "456",
+			"columnName": "医院等级",
+			"value": "一级甲等"
+		},{
+			"columnId": "789",
+			"columnName": "医院等级",
+			"value": "二级乙等"
+		}]
+		"compare": [],
+		"rank": [
+			"+"
+		],
+		"timeType": [],
+		"limit": []
+	}
+
+}
