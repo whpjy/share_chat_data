@@ -114,5 +114,4 @@ def three_figures_and_one_table(universal_processors, user_input, is_MultiQA):
     result = universal_processors.process(messsge, user_input)
     if result['type'] == "extract_json":
         return final_extract_result(universal_processors, result['data'], user_input, is_MultiQA)
-    # elif result['type'] == "ask_user_for_missing_data":
-    #     return final_ask_user_result(result['data'])
+

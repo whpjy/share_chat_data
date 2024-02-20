@@ -77,6 +77,7 @@ class ChatbotModel:
 
         if user_choices[0] in ['2', '3']:
             user_choices = ['1']
+
         # 根据用户选择获取对应场景
         if user_choices:
             self.current_purpose = purpose_options[user_choices[0]]
@@ -135,11 +136,7 @@ class ChatbotModel:
             if self.is_related_to_last_intent(user_input):
                 print('***用户在回答LLM提出的问题，进入多轮')
                 is_MultiQA = True
-                if self.current_purpose == 'chou_jiang':
-                    print("---", self.last_llm_answer)
-                    result = chou_jiang(self.processors[self.current_purpose], user_input, self.last_llm_answer)
-                    self.last_llm_answer = result["context"]
-                    return result
+
             else:
                 # 用户没有回答问题也要重新识别意图
                 print(user_input, "-------------****-----")

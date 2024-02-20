@@ -1,11 +1,11 @@
 from scene_config import scene_prompts
 from utils.date_utils import get_current_date
-from knowledge_graph.kg_api import get_target_node
+from knowledge_graph.kg_api import get_target_node, get_target_aggregation
 from utils.helpers import (get_forcr_word, get_clean_text, get_group_word,
                            extract_limits, extract_compare, extract_rank,
                            check_and_fill_forcr_word, check_time,
                            check_group, contains_time, clear_group_and_compare_in_key,
-                           check_key_and_group)
+                           check_key_and_group, from_target_get_id, from_group_get_id, get_where_detail)
 
 
 def final_extract_result(universal_processors, data, user_input, is_MultiQA):
