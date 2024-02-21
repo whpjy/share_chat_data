@@ -20,6 +20,8 @@ def final_extract_result(universal_processors, data, user_input, is_MultiQA):
     compare = extract_compare(user_input)
     rank = extract_rank(user_input)
     key_list = clear_group_and_compare_in_key(key_list, group_list, compare)
+
+    print("*****  where", data['where'])
     where_list = get_where_detail(data['where'])
 
     # -----------------基于知识图谱的多轮-------------------#

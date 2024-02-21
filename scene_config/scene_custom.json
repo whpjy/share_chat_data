@@ -61,7 +61,7 @@
     "name": "主题分析",
     "description": "",
     "parameters":     {
-        "key": {
+      "key": {
           "desc": "要查询的对象、主体、指标",
           "type": "string",
           "value": []
@@ -77,12 +77,17 @@
           "value": []
         },
         "object": {
-          "desc": "----",
+          "desc": "查询对象",
           "type": "string",
           "value": []
         },
        "measurement": {
-          "desc": "查询时按什么条件分组",
+          "desc": "度量",
+          "type": "string",
+          "value": []
+        },
+      "aggregation": {
+          "desc": "聚合方式，有的不需要聚合",
           "type": "string",
           "value": []
         },
@@ -117,12 +122,17 @@
           "value": []
         },
         "object": {
-          "desc": "----",
+          "desc": "查询对象",
           "type": "string",
           "value": []
         },
        "measurement": {
-          "desc": "查询时按什么条件分组",
+          "desc": "度量",
+          "type": "string",
+          "value": []
+        },
+      "aggregation": {
+          "desc": "聚合方式，有的不需要聚合",
           "type": "string",
           "value": []
         },
@@ -139,7 +149,7 @@
     "description": "含有以下关键词或同义词: 趋势，想要查看数据的趋势图",
     "parameters":
       {
-        "key": {
+          "key": {
           "desc": "要查询的对象、主体、指标",
           "type": "string",
           "value": []
@@ -155,12 +165,17 @@
           "value": []
         },
         "object": {
-          "desc": "----",
+          "desc": "查询对象",
           "type": "string",
           "value": []
         },
        "measurement": {
-          "desc": "查询时按什么条件分组",
+          "desc": "度量",
+          "type": "string",
+          "value": []
+        },
+      "aggregation": {
+          "desc": "聚合方式，有的不需要聚合",
           "type": "string",
           "value": []
         },
@@ -177,7 +192,7 @@
     "description": "含有以下关键词或同义词: 比较、对比、排名，想要查看数据的柱状图",
     "parameters":
       {
-        "key": {
+          "key": {
           "desc": "要查询的对象、主体、指标",
           "type": "string",
           "value": []
@@ -193,12 +208,17 @@
           "value": []
         },
         "object": {
-          "desc": "----",
+          "desc": "查询对象",
           "type": "string",
           "value": []
         },
        "measurement": {
-          "desc": "查询时按什么条件分组",
+          "desc": "度量",
+          "type": "string",
+          "value": []
+        },
+      "aggregation": {
+          "desc": "聚合方式，有的不需要聚合",
           "type": "string",
           "value": []
         },
@@ -215,7 +235,7 @@
     "description": "含有以下关键词或同义词: 占比、比例、分布",
     "parameters":
       {
-        "key": {
+          "key": {
           "desc": "要查询的对象、主体、指标",
           "type": "string",
           "value": []
@@ -231,12 +251,17 @@
           "value": []
         },
         "object": {
-          "desc": "----",
+          "desc": "查询对象",
           "type": "string",
           "value": []
         },
        "measurement": {
-          "desc": "查询时按什么条件分组",
+          "desc": "度量",
+          "type": "string",
+          "value": []
+        },
+      "aggregation": {
+          "desc": "聚合方式，有的不需要聚合",
           "type": "string",
           "value": []
         },
@@ -258,28 +283,33 @@
     "name": "产品合格率",
     "description": "用户想要查询产品的合格率，输入的句子含有一下关键词：产品、合格率、合格的百分比。例：根据来源统计2023年抽查为合格的百分比",
     "parameters":    {
-      "key": {
-        "desc": "要查询的对象、主体、指标",
-        "type": "string",
-        "value": []
-      },
-     "time": {
-        "desc": "查询的时间范围",
-        "type": "string",
-        "value": []
-      },
-     "group": {
-        "desc": "查询时按什么条件分组",
-        "type": "string",
-        "value": []
-      },
+          "key": {
+          "desc": "要查询的对象、主体、指标",
+          "type": "string",
+          "value": []
+        },
+       "time": {
+          "desc": "查询的时间范围",
+          "type": "string",
+          "value": []
+        },
+       "group": {
+          "desc": "查询时按什么条件分组",
+          "type": "string",
+          "value": []
+        },
         "object": {
-          "desc": "----",
+          "desc": "查询对象",
           "type": "string",
           "value": []
         },
        "measurement": {
-          "desc": "查询时按什么条件分组",
+          "desc": "度量",
+          "type": "string",
+          "value": []
+        },
+      "aggregation": {
+          "desc": "聚合方式，有的不需要聚合",
           "type": "string",
           "value": []
         },

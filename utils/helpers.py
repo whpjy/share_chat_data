@@ -4,9 +4,12 @@ import json
 import re
 import requests
 import config
-
+import spacy
 from functools import lru_cache
 from utils.send_llm import send_local_qwen_message, send_proxy_qwen_message
+from scene_config import scene_prompts
+
+nlp = spacy.load("zh_core_web_sm")
 
 send_llm_req = {
     "Qwen": send_local_qwen_message,
@@ -441,7 +444,7 @@ def extract_json_from_string(input_string):
 
         return valid_jsons[0]
     except Exception as e:
-        print(f"Error occurred: {e}")
+        print(f"Error occurred，从模型输出提取json失败: {e}")
         return []
 
 
@@ -514,13 +517,41 @@ json_where = json.load(fr_where)
 
 def get_where(user_input):
     exist_word = []
+    # ------直接匹配（完全对应匹配）------ #
     for where_word in json_where.keys():
         if where_word in user_input:
             exist_word.append(where_word)
 
+    # ------LLM匹配（同义表达匹配）------ #
+    message = scene_prompts.where_word_match_prompt.replace("{user_input}", user_input)
+    match_json_result_by_llm = send_message(message)
+    match_json_result = extract_json_from_string(match_json_result_by_llm)
+
+    if isinstance(match_json_result, dict):
+        for match_key, match_word_list in match_json_result.items():
+            if isinstance(match_word_list, list):
+                for match_word in match_word_list:
+                    if match_word not in exist_word and match_word in json_where.keys():
+                        exist_word.append(match_word)
+
     if len(exist_word) > 0:
+        exist_word = Similarity_calculation(user_input, exist_word)
         return exist_word
     return []
+
+
+def Similarity_calculation(sentence, where_word_list):
+    # 设置阈值
+    threshold = 0.5
+    # 用于存储相似度高于阈值的词
+    similar_words = []
+    # 计算每个词与sentence的相似度
+    for word in where_word_list:
+        similarity = nlp(word).similarity(nlp(sentence))
+        if similarity > threshold:
+            similar_words.append(word)
+
+    return similar_words
 
 
 def get_where_detail(where_word_list):
@@ -529,7 +560,7 @@ def get_where_detail(where_word_list):
         if where_word in json_where.keys():
             where_list.append({"columnId": json_where[where_word]["columnId"],
                                "columnName": json_where[where_word]["columnName"],
-                              "value": where_word})
+                               "value": where_word})
 
     return where_list
 
@@ -552,6 +583,9 @@ def from_group_get_id(targetname, group_list):
 
     origin_group = json_zhibiao[targetname]["group"]
     for group_word in group_list:
+        if group_word in time_word:
+            group_with_id_list.append({"columnId": "-1", "columnName": group_word})
+            continue
         if group_word in origin_group.keys():
             group_with_id_list.append({"columnId": origin_group[group_word]["columnId"], "columnName": group_word})
 
