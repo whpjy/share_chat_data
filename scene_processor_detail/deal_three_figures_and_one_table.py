@@ -63,17 +63,25 @@ def final_extract_result(universal_processors, data, user_input, is_MultiQA):
     if len(measurement_name) > 0:
         targetName += measurement_name[0]
 
+    print("targetName:", targetName)
     if len(aggregation_name) > 0:
         targetName += aggregation_name[0]
+    print("targetName:", targetName)
     # -----------------基于知识图谱的多轮-------------------#
 
     time_flag = contains_time(user_input)
     if len(time_list) > 0 and is_MultiQA:
         time_flag = True
 
+    final_type = 1
+    time_word = ["月", "日", "年", "季度", "天", "周"]
+    for group_word in group_list:
+        if group_word in time_word:
+            final_type = 5
+
     if time_flag:  # 问题是否包含时间词
         return {
-            "type": "1",
+            "type": final_type,
             "value": {
                 "意图": "查询",
                 "key": key_list,

@@ -9,23 +9,19 @@ def send_local_qwen_message(message):
     print('--------------------------------------------------------------------')
     if config.DEBUG:
         print('请求LLM的完整问题:', message)
-
     print('----------------------------------')
-    headers = {
-        "Authorization": f"Bearer {config.TONGYI_PROXY_API_KEY}",
-        "Content-Type": "application/json",
-    }
 
     data = {
         "model": "qwen-turbo",
         "messages": [
             {"role": "system", "content": "你是个乐于助人的助手."},
             {"role": "user", "content": f"{message}"}
-        ]
+        ],
+        "stream" : False
     }
 
     try:
-        response = requests.post(config.Qwen_URL, headers=headers, json=data, verify=False)
+        response = requests.post(config.Qwen_URL,json=data, verify=False)
         if response.status_code == 200:
             answer = response.json()["choices"][0]["message"]['content']
             print('LLM输出:', answer)

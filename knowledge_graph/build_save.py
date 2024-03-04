@@ -48,5 +48,5 @@ color_map += ['green'] * len(measurement_list)
 # nx.write_adjlist(G, fh)
 # #
 # # print(G.nodes.data())
-nx.draw(G, with_labels=True, font_size=10, node_color=color_map)
-plt.show()
+# nx.draw(G, with_labels=True, font_size=10, node_color=color_map)
+# plt.show()

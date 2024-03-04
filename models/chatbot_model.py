@@ -75,7 +75,7 @@ class ChatbotModel:
             print("LLM意图识别错误！启用规则识别")
             user_choices = ['6']
 
-        if user_choices[0] in ['2', '3', '8']:
+        if user_choices[0] in ['2', '3', '8', '9']:
             user_choices = ['1']
 
         # 根据用户选择获取对应场景

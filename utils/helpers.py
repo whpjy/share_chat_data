@@ -8,8 +8,12 @@ import spacy
 from functools import lru_cache
 from utils.send_llm import send_local_qwen_message, send_proxy_qwen_message
 from scene_config import scene_prompts
+from sentence_transformers import SentenceTransformer, util
+# 加载预训练的BERT模型，这里以'MiniLM-L6-v2'为例，也可以选择其他支持句子级别的模型
 
-nlp = spacy.load("zh_core_web_sm")
+model = SentenceTransformer('pretrain/all-MiniLM-L6-v2')
+
+# nlp = spacy.load("zh_core_web_sm")
 
 send_llm_req = {
     "Qwen": send_local_qwen_message,
@@ -468,22 +472,20 @@ def contain_json(input_string):
 
 object_list = ['收支余', '基金结余', '结算信息', '费用明细', '特殊病(医院)', '居民特殊病', '职工特殊病', '特殊病(病种)',
                '参保人数信息']
-measurement_list = ['退休人数', '符合医保内费用', '就诊id计数', '人员类别计数', '数据条数', '参保总人数', '现金',
-                    '其他费',
-                    '统计日期计数', '姓名计数', '医保编码计数', '本年结余', '险种计数', '丙类', '统筹区计数',
-                    '账户支付数',
-                    '按病种收费', '女职工人数', '在职人数', '其他基金支付', '床位费', '医疗类别计数', '结余金额',
-                    '就医地计数',
-                    '卫生材料费', '西药费', '身份证号计数', '结算id计数', '数量', '民政补助', '是否手动报销计数',
-                    '化验费',
-                    '科室计数', '公务员补助', '病种计数', '治疗费', '一般诊疗费', '检查费', '医生计数', '基金类型计数',
-                    '共济账户', '大额医疗补助', '累计基金结余', '护理费', '手术费', '基金收入', '基金支出',
-                    '费用归并计数',
-                    '年龄段计数', '备付力', '医院名称计数', '单价', '明细总额', '诊察费', '中药饮片费', '大病保险',
-                    '住院床日',
-                    '挂号费', '项目名称计数', '人员编号计数', '乙类自理', '统筹基金', '总费用', '中成药费',
-                    '医院等级计数',
-                    '结算月份计数', '账户支付']
+
+measurement_list = ['基金类型计数', '其他基金支付', '科室计数', '公务员补助', '治疗费', '住院床日',
+                    '化验费', '经营性质计数', '累计基金结余', '单价', '基金支出', '统筹区计数',
+                    '明细总额', '挂号费', '大额医疗补助', '医疗机构简称计数', '联系地址计数',
+                    '医保办邮箱计数', '费用归并计数', '医院名称计数', '项目名称计数', '数量', '现金',
+                    '结算id计数', '姓名计数', '就医地计数', '医保编码计数', '诊察费', '退休人数',
+                    '就诊id计数', '机构性质计数', '病种计数', '参保总人数', '人员类别计数', '本年结余',
+                    '人员编号计数', '床位费', '险种计数', '护理费', '卫生材料费', '医生计数', '年龄段计数',
+                    '在职人数', '大病保险', '民政补助', '身份证号计数', '是否手动报销计数', '经营面积',
+                    '一般诊疗费', '备付力', '统计日期计数', '医保办电话计数', '医院等级计数', '共济账户',
+                    '账户支付数', '女职工人数', '统筹基金', '结算月份计数', '总费用', '丙类', '乙类自理',
+                    '手术费', '检查费', '中药饮片费', '其他费', '结余金额', '基金收入', '数据条数',
+                    '按病种收费', '账户支付', '中成药费', '医疗类别计数', '医疗机构名称计数', '西药费',
+                    '符合医保内费用']
 
 aggregation_list = ['合计', '平均', '最大值', '最小值']
 
@@ -516,11 +518,13 @@ json_where = json.load(fr_where)
 
 
 def get_where(user_input):
-    exist_word = []
+    direct_exist_word = []
+    llm_exist_word = []
+
     # ------直接匹配（完全对应匹配）------ #
     for where_word in json_where.keys():
         if where_word in user_input:
-            exist_word.append(where_word)
+            direct_exist_word.append(where_word)
 
     # ------LLM匹配（同义表达匹配）------ #
     message = scene_prompts.where_word_match_prompt.replace("{user_input}", user_input)
@@ -531,13 +535,13 @@ def get_where(user_input):
         for match_key, match_word_list in match_json_result.items():
             if isinstance(match_word_list, list):
                 for match_word in match_word_list:
-                    if match_word not in exist_word and match_word in json_where.keys():
-                        exist_word.append(match_word)
+                    if match_word not in llm_exist_word and match_word in json_where.keys() and match_word not in direct_exist_word:
+                        llm_exist_word.append(match_word)
 
-    if len(exist_word) > 0:
-        exist_word = Similarity_calculation(user_input, exist_word)
-        return exist_word
-    return []
+    if len(llm_exist_word) > 0:
+        llm_exist_word = Similarity_calculation(user_input, llm_exist_word)
+
+    return direct_exist_word + llm_exist_word
 
 
 def Similarity_calculation(sentence, where_word_list):
@@ -546,11 +550,20 @@ def Similarity_calculation(sentence, where_word_list):
     # 用于存储相似度高于阈值的词
     similar_words = []
     # 计算每个词与sentence的相似度
+    print("进行相似度计算")
+    print("句子：", sentence)
+    print("需要计算词：", where_word_list)
     for word in where_word_list:
-        similarity = nlp(word).similarity(nlp(sentence))
+
+        embeddings1 = model.encode(word)
+        embeddings2 = model.encode(sentence)
+        cosine_similarity = util.cos_sim(embeddings1, embeddings2)
+        similarity = cosine_similarity[0][0]
+
         if similarity > threshold:
             similar_words.append(word)
 
+        print(word, ": ", similarity)
     return similar_words
 
 
@@ -571,14 +584,17 @@ json_zhibiao = json.load(fr_zhibiao)
 
 def from_target_get_id(targetname):
     if targetname not in json_zhibiao.keys():
-        return "不存在" + targetname + "的id"
+        return "-1"
 
     return json_zhibiao[targetname]["targetId"]
 
 
 def from_group_get_id(targetname, group_list):
+
     group_with_id_list = []
     if targetname not in json_zhibiao.keys():
+        for group_word in group_list:
+            group_with_id_list.append({"columnId": "-1", "columnName": group_word})
         return group_with_id_list
 
     origin_group = json_zhibiao[targetname]["group"]
@@ -586,7 +602,7 @@ def from_group_get_id(targetname, group_list):
         if group_word in time_word:
             group_with_id_list.append({"columnId": "-1", "columnName": group_word})
             continue
-        if group_word in origin_group.keys():
+        elif group_word in origin_group.keys():
             group_with_id_list.append({"columnId": origin_group[group_word]["columnId"], "columnName": group_word})
 
     return group_with_id_list

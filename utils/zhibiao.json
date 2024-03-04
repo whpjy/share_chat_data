@@ -5801,6 +5801,60 @@
             }
         }
     },
+     "居民特殊病-统筹基金合计": {
+        "targetName": "居民特殊病-统筹基金合计",
+        "targetId": -100000,
+        "time": [
+            {
+                "columnId": 74,
+                "columnName": "结算时间"
+            }
+        ],
+        "type": [
+            {
+                "columnId": 65,
+                "columnName": "医院等级"
+            },
+            {
+                "columnId": 67,
+                "columnName": "统筹区"
+            },
+            {
+                "columnId": 69,
+                "columnName": "就医地"
+            },
+            {
+                "columnId": 72,
+                "columnName": "人员类别"
+            }
+        ],
+        "group": {
+            "医院名称": {
+                "columnId": 61,
+                "columnName": "医院名称"
+            },
+            "医院等级": {
+                "columnId": 65,
+                "columnName": "医院等级"
+            },
+            "统筹区": {
+                "columnId": 67,
+                "columnName": "统筹区"
+            },
+            "就医地": {
+                "columnId": 69,
+                "columnName": "就医地"
+            },
+            "病种": {
+                "columnId": 71,
+                "columnName": "病种"
+            },
+            "人员类别": {
+                "columnId": 72,
+                "columnName": "人员类别"
+            }
+        }
+    },
     "居民特殊病-共济账户合计": {
         "targetName": "居民特殊病-共济账户合计",
         "targetId": 8403088356995640,
