@@ -117,6 +117,7 @@ dim_words = ["统筹区", "险种", "医院等级", "就医地", "人员类别",
 time_word = ["月", "日", "年", "季度", "天", "周"]  # 时间前不带序词也可作为分类词
 
 
+
 def contains_find(user_input, word):
     positions = []
     start = 0
