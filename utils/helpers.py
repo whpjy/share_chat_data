@@ -113,7 +113,7 @@ def get_clean_text(user_input):
     return user_input
 
 
-dim_words = ["统筹区", "险种", "医院等级", "就医地", "人员类别", "医院名称", "病种"]  # group分类词
+dim_words = ["统筹区", "险种", "医院等级", "就医地", "人员类别", "医院名称", "病种","医疗机构名称","医疗机构简称","联系地址","经营性质","医保办电话","医保办邮箱","机构性质"]  # group分类词
 time_word = ["月", "日", "年", "季度", "天", "周"]  # 时间前不带序词也可作为分类词
 
 
@@ -546,7 +546,7 @@ def get_where(user_input):
 
 def Similarity_calculation(sentence, where_word_list):
     # 设置阈值
-    threshold = 0.5
+    threshold = 0.4
     # 用于存储相似度高于阈值的词
     similar_words = []
     # 计算每个词与sentence的相似度

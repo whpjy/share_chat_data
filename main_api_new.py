@@ -14,7 +14,6 @@ async def receive_and_forward(request_data: dict):
     # 从请求数据中提取模型和消息
     messages = request_data.get("messages")
     question = messages[0]['content']
-    role = messages[0]['role']
     if not question:
         return {"error": "No question provided"}
 
@@ -23,7 +22,7 @@ async def receive_and_forward(request_data: dict):
     return response
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=7071)
+    uvicorn.run(app, host="0.0.0.0", port=7072)
 
 
 
